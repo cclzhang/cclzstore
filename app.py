@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'asdfasdf'#render_template("garage.html")
+    return render_template("index.html")
 
 @app.route('/garage')
 def hello1():
