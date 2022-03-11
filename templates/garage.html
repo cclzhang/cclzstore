@@ -8,135 +8,21 @@
 <h2>Items in Ccl's Garage</h2>
 <div class="container-fluid">
     <ul class="inventory row">
+        {% for item in items %}
         <li class="item col">
             <a href="">
                 <img src="../static/icons/cart.svg" alt="" height="100" width="100" loading="lazy">
-                <h4>item 1</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odio laboriosam dolor quia quo ab sunt deleniti quam, harum autem rem qui dicta modi minus aperiam doloremque magni perferendis recusandae.</p>
+                <h4>{{ item["name"] }}</h4>
+                <p>stock: {{ item["stock"] }}</p>
+                <p>{{ item["description"] }}</p>
                 <p>
-                    <span>CA $</span>
-                    <span>$30.00</span>
+                    <span>CA </span>
+                    <span>{{ item["price"] | cad }}</span>
                 </p>
             </a>
             <button type="button">Add to cart</button>
         </li>
-        <li class="item col">
-            <a href="">
-                <img src="../static/icons/cart.svg" alt="" height="100" width="100">
-                <h4>item 1</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odio laboriosam dolor quia quo ab sunt
-                    deleniti quam, harum autem rem qui dicta modi minus aperiam doloremque magni perferendis recusandae.</p>
-                <p>
-                    <span>CA $</span>
-                    <span>$30.00</span>
-                </p>
-            </a>
-            <button type="button">Add to cart</button>
-        </li>
-        <li class="item col">
-            <a href="">
-                <img src="../static/icons/cart.svg" alt="" height="100" width="100">
-                <h4>item 1</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odio laboriosam dolor quia quo ab sunt
-                    deleniti quam, harum autem rem qui dicta modi minus aperiam doloremque magni perferendis recusandae.</p>
-                <p>
-                    <span>CA $</span>
-                    <span>$30.00</span>
-                </p>
-            </a>
-            <button type="button">Add to cart</button>
-        </li>
-        <li class="item col">
-            <a href="">
-                <img src="../static/icons/cart.svg" alt="" height="100" width="100">
-                <h4>item 1</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odio laboriosam dolor quia quo ab sunt
-                    deleniti quam, harum autem rem qui dicta modi minus aperiam doloremque magni perferendis recusandae.</p>
-                <p>
-                    <span>CA $</span>
-                    <span>$30.00</span>
-                </p>
-            </a>
-            <button type="button">Add to cart</button>
-        </li>
-        <li class="item col">
-            <a href="">
-                <img src="../static/icons/cart.svg" alt="" height="100" width="100">
-                <h4>item 1</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odio laboriosam dolor quia quo ab sunt
-                    deleniti quam, harum autem rem qui dicta modi minus aperiam doloremque magni perferendis recusandae.</p>
-                <p>
-                    <span>CA $</span>
-                    <span>$30.00</span>
-                </p>
-            </a>
-            <button type="button">Add to cart</button>
-        </li>
-        <li class="item col">
-            <a href="">
-                <img src="../static/icons/cart.svg" alt="" height="100" width="100">
-                <h4>item 1</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odio laboriosam dolor quia quo ab sunt
-                    deleniti quam, harum autem rem qui dicta modi minus aperiam doloremque magni perferendis recusandae.</p>
-                <p>
-                    <span>CA $</span>
-                    <span>$30.00</span>
-                </p>
-            </a>
-            <button type="button">Add to cart</button>
-        </li>
-        <li class="item col">
-            <a href="">
-                <img src="../static/icons/cart.svg" alt="" height="100" width="100">
-                <h4>item 1</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odio laboriosam dolor quia quo ab sunt
-                    deleniti quam, harum autem rem qui dicta modi minus aperiam doloremque magni perferendis recusandae.</p>
-                <p>
-                    <span>CA $</span>
-                    <span>$30.00</span>
-                </p>
-            </a>
-            <button type="button">Add to cart</button>
-        </li>
-        <li class="item col">
-            <a href="">
-                <img src="../static/icons/cart.svg" alt="" height="100" width="100">
-                <h4>item 1</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odio laboriosam dolor quia quo ab sunt
-                    deleniti quam, harum autem rem qui dicta modi minus aperiam doloremque magni perferendis recusandae.</p>
-                <p>
-                    <span>CA $</span>
-                    <span>$30.00</span>
-                </p>
-            </a>
-            <button type="button">Add to cart</button>
-        </li>
-        <li class="item col">
-            <a href="">
-                <img src="../static/icons/cart.svg" alt="" height="100" width="100">
-                <h4>item 1</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odio laboriosam dolor quia quo ab sunt
-                    deleniti quam, harum autem rem qui dicta modi minus aperiam doloremque magni perferendis recusandae.</p>
-                <p>
-                    <span>CA $</span>
-                    <span>$30.00</span>
-                </p>
-            </a>
-            <button type="button">Add to cart</button>
-        </li>
-        <li class="item col">
-            <a href="">
-                <img src="../static/icons/cart.svg" alt="" height="100" width="100">
-                <h4>item 1</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odio laboriosam dolor quia quo ab sunt
-                    deleniti quam, harum autem rem qui dicta modi minus aperiam doloremque magni perferendis recusandae.</p>
-                <p>
-                    <span>CA $</span>
-                    <span>$30.00</span>
-                </p>
-            </a>
-            <button type="button">Add to cart</button>
-        </li>
+        {% endfor %}
     </ul>
 </div>
 {% endblock %}

@@ -8,80 +8,20 @@
 <h2>Learn with Ccl</h2>
 <div class="container-fluid">
     <ul class="inventory row">
+        {% for lesson in lessons %}
         <li class="item col">
             <a href="">
-                <img src="../static/icons/cart.svg" alt="" height="100" width="100">
-                <h4>book 1</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odio laboriosam dolor quia quo ab
-                    sunt deleniti quam, harum autem rem qui dicta modi minus aperiam doloremque magni perferendis
-                    recusandae.</p>
+                <img src="../static/icons/cart.svg" alt="" height="100" width="100" loading="lazy">
+                <h4>{{ lesson["name"] }}</h4>
+                <p>length: {{ lesson["duration_minutes"] }} minutes</p>
                 <p>
-                    <span>CA $</span>
-                    <span>$30.00</span>
+                    <span>CA </span>
+                    <span>{{ lesson["price"] | cad }}</span>
                 </p>
             </a>
             <button type="button">Add to cart</button>
         </li>
-        <li class="item col">
-            <a href="">
-                <img src="../static/icons/cart.svg" alt="" height="100" width="100">
-                <h4>book 1</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odio laboriosam dolor quia quo ab
-                    sunt
-                    deleniti quam, harum autem rem qui dicta modi minus aperiam doloremque magni perferendis recusandae.
-                </p>
-                <p>
-                    <span>CA $</span>
-                    <span>$30.00</span>
-                </p>
-            </a>
-            <button type="button">Add to cart</button>
-        </li>
-        <li class="item col">
-            <a href="">
-                <img src="../static/icons/cart.svg" alt="" height="100" width="100">
-                <h4>book 1</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odio laboriosam dolor quia quo ab
-                    sunt
-                    deleniti quam, harum autem rem qui dicta modi minus aperiam doloremque magni perferendis recusandae.
-                </p>
-                <p>
-                    <span>CA $</span>
-                    <span>$30.00</span>
-                </p>
-            </a>
-            <button type="button">Add to cart</button>
-        </li>
-        <li class="item col">
-            <a href="">
-                <img src="../static/icons/cart.svg" alt="" height="100" width="100">
-                <h4>book 1</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odio laboriosam dolor quia quo ab
-                    sunt
-                    deleniti quam, harum autem rem qui dicta modi minus aperiam doloremque magni perferendis recusandae.
-                </p>
-                <p>
-                    <span>CA $</span>
-                    <span>$30.00</span>
-                </p>
-            </a>
-            <button type="button">Add to cart</button>
-        </li>
-        <li class="item col">
-            <a href="">
-                <img src="../static/icons/cart.svg" alt="" height="100" width="100">
-                <h4>book 5</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odio laboriosam dolor quia quo ab
-                    sunt
-                    deleniti quam, harum autem rem qui dicta modi minus aperiam doloremque magni perferendis recusandae.
-                </p>
-                <p>
-                    <span>CA $</span>
-                    <span>$30.00</span>
-                </p>
-            </a>
-            <button type="button">Add to cart</button>
-        </li>
+        {% endfor %}
     </ul>
 </div>
 {% endblock %}
